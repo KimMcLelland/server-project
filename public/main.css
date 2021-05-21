@@ -1,0 +1,12 @@
+* {
+    background-color: limegreen;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container {
+    text-align: center;
+}

@@ -1,0 +1,10 @@
+<div class = "monsters">
+ <h2>Some examples of monsters</h2>
+    {{#if listExists}}
+ <ul>
+    {{#each data}}
+      <li>{{this.[2].name}}</li>
+    {{/each}}
+ </ul>
+ {{/if}}
+</div>
