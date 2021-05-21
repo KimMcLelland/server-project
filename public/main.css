@@ -1,12 +1,25 @@
 * {
-    background-color: limegreen;
+    color: limegreen;
+    background-color: black;
 }
 
 .navigation ul {
     display: flex;
     justify-content: space-evenly;
 }
-
+.header {
+    text-align: center;
+}
 .container {
     text-align: center;
+}
+
+li {
+    list-style-type: none
+}
+
+.each_list {
+    display: flex;
+    flex-direction: column;
+    text-align: left
 }

@@ -1,11 +1,8 @@
-<div class = "monsters">
- <h2>Some examples of monsters</h2>
- <h3>Challenge Rating 5:</h3>
+
     {{#if listExists}}
  <ul>
-    {{#each data}}
-      <li>{{this.[4].name}}</li>
+    {{#each results}}
+      <li>{{this.name}}</li>
     {{/each}}
  </ul>
  {{/if}}
-</div>

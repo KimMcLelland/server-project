@@ -16,16 +16,16 @@ app.set('view engine', '.hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', async(req, res) => {
-    let data = await getMonster();   
-    res.render('index', { data, listExists: true});
+    let data = await getMonster(); 
+    res.render('index', { results:data.results, listExists: true}, );
 });
 
 app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.get('/iconic', (req, res) => {
-    let data = getIconic();
+app.get('/iconic', async(req, res) => {
+    let data = await getIconic();
     res.render('iconic', {data, listExists: true});
 });
 
