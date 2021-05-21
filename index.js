@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const path = require('path'); 
 const getMonster = require('./lib/monsters.js');
-// const getIconic = require('./lib/iconic_creatures.js');
+const getIconic = require('./lib/iconic_creatures.js');
 const app = express();
 
 app.engine('hbs', hbs({ 
@@ -25,7 +25,8 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/iconic', (req, res) => {
-    res.render('iconic');
+    let data = getIconic();
+    res.render('iconic', {data, listExists: true});
 });
 
 app.get('*', (req,res)=>{ 
